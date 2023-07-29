@@ -9,7 +9,7 @@ import logo from './logo.svg';
 import styles from './App.module.css';
 import Header from './Header';
 
-const URL = "https://example.com";
+const URL = "https://ksm-burner.vercel.app/";
 
 const App: Component = () => {
     const [api, setApi] = createSignal<ApiPromise>();
