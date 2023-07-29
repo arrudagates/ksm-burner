@@ -15,7 +15,7 @@ const App: Component = () => {
     const [api, setApi] = createSignal<ApiPromise>();
     const [selectedAccount, setSelectedAccount] = createSignal<{ account: Account, wallet: BaseWallet }>();
     const [availableAccounts, setAvailableAccounts] = createSignal<{ account: Account, wallet: BaseWallet }[]>([]);
-    const [amount, setAmount] = createSignal<number>(0);
+    const [amount, setAmount] = createSignal<string>("0");
     const [burned, setBurned] = createSignal<string>();
 
     const injectedWallets = new InjectedWalletProvider({}, "BURN KSM");
@@ -78,9 +78,10 @@ const App: Component = () => {
                         placeholder='Amount'
                         value={amount().toString()}
                         onInput={e => {
-                            const a = parseFloat(e.currentTarget.value);
+                            const aa = e.currentTarget.value;
+                            const a = parseFloat(aa);
                             if (typeof a === 'number') {
-                                setAmount(a);
+                                setAmount(aa);
                             }
                         }}
                     />
