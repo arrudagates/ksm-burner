@@ -55,7 +55,8 @@ const App: Component = () => {
         if (!chain || !address || !signer) return;
 
         await chain.tx.balances.transfer(
-            "0x0000000000000000000000000000000000000000000000000000000000000000",
+            // moduleId "ksm/burn"
+            "5EYCAe5hjM7JDBy6dM6fYa51rUYQSQVyaqh9DaMwgkUDcUTk",
             new BigNumber(amount()).times(new BigNumber("1000000000000")).toString()
         )
                    .signAndSend(address, { signer });
