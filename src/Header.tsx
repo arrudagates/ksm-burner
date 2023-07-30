@@ -32,8 +32,8 @@ const Header = (props: IProps) => {
     });
 
   return (
-      <div class={styles.Header}>
-          <div class={styles.Title}>Burn Your KSM! 🔥🐦‍⬛</div>
+      <div class={styles.header}>
+          <div class={styles.select}>
           <Select value={s()} onChange={(v) => {
               const a = props.accounts().find((sel) => sel.account.address == v);
 
@@ -59,6 +59,7 @@ const Header = (props: IProps) => {
                   </SelectListbox>
               </SelectContent>
           </Select>
+          </div>
       </div>
   );
 };
