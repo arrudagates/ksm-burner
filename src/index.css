@@ -5,6 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-image: url("https://i.imgur.com/hVXc6Bs.gif");
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  min-height:100%;
+}
+
+#root {
+    height: 100%;
 }
 
 code {
@@ -12,7 +21,6 @@ code {
     monospace;
 }
 
-a {
-  color: red;
-  text-decorations: none;
+h1 {
+    font-size: xx-large !important;
 }

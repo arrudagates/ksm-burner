@@ -4,7 +4,7 @@ import { render } from 'solid-js/web';
 import './index.css';
 import App from './App';
 
-import { HopeProvider } from '@hope-ui/solid';
+import { HopeProvider, HopeThemeConfig } from '@hope-ui/solid';
 
 const root = document.getElementById('root');
 
@@ -14,4 +14,16 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   );
 }
 
-render(() => <HopeProvider><App /></HopeProvider>, root!);
+const config: HopeThemeConfig = {
+    initialColorMode: "dark",
+    darkTheme: {
+        colors: {
+            neutral9: "white",
+            neutral7: "white",
+            primary9: "black",
+            primary10: "red",
+        }
+    },
+}
+
+render(() => <HopeProvider config={config}><App /></HopeProvider>, root!);

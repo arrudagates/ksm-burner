@@ -1,12 +1,10 @@
 .App {
   text-align: center;
-
-  background-image: url("https://i.imgur.com/hVXc6Bs.gif");
-  background-repeat: no-repeat;
-  background-size:100% 100%;
-  min-height:100%;
-
   color: white;
+
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
 }
 
 .container {
@@ -33,4 +31,26 @@
 
 .link {
   color: #b318f0;
+}
+
+.subscan:hover {
+    text-decoration-line: underline;
+}
+
+.tweet {
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  background: #55ACEE;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+}
+
+.tweet:hover {
+  opacity: 0.7;
 }
